@@ -196,4 +196,4 @@ class Node2Vec:
         if 'sg' not in skip_gram_params:
             skip_gram_params['sg'] = 1
 
-        return gensim.models.Word2Vec(self.walks, **skip_gram_params)
+        return gensim.models.Word2Vec(tqdm(self.walks), **skip_gram_params)
